@@ -30,15 +30,15 @@ import (
 // The close channel receives a signal to close the worker
 // The closed channel signals that the worker was closed
 type structWorker struct {
-	pool *Pool
-	close chan interface{}
+	pool   *Pool
+	close  chan interface{}
 	closed chan interface{}
 }
 
 // the Result of any go routine running inside the pool
 type Result struct {
-	output interface{}
-	err error
+	Output interface{}
+	Err    error
 }
 
 // The request channel is used to send the result back
@@ -56,19 +56,19 @@ func (worker *structWorker) run() {
 	defer close(worker.closed)
 	for {
 		select {
-			case request, ok := <-worker.pool.inputChannel:
-				if !ok {
-					return
-				}
-				// execute the function
-				result, err := worker.pool.f(request.param)
-				request.outputChannel <-Result{result, err}
-				atomic.AddInt64(&worker.pool.queuedJobs, -1)
-				if request.wg != nil {
-					request.wg.Done()
-				}
-			case <-worker.close:
+		case request, ok := <-worker.pool.inputChannel:
+			if !ok {
 				return
+			}
+			// execute the function
+			result, err := worker.pool.f(request.param)
+			request.outputChannel <- Result{result, err}
+			atomic.AddInt64(&worker.pool.queuedJobs, -1)
+			if request.wg != nil {
+				request.wg.Done()
+			}
+		case <-worker.close:
+			return
 		}
 	}
 }
@@ -99,13 +99,13 @@ func (pool *Pool) SetSize(n int) {
 	pool.mutex.Lock()
 	defer pool.mutex.Unlock()
 	poolLen := len(pool.workers)
-	for i := poolLen; i<n; i++ {
+	for i := poolLen; i < n; i++ {
 		pool.workers = append(pool.workers, pool.newWorker())
 	}
-	for i := n; i<poolLen; i++ {
+	for i := n; i < poolLen; i++ {
 		pool.workers[i].stop()
 	}
-	for i := n; i<poolLen; i++ {
+	for i := n; i < poolLen; i++ {
 		pool.workers[i].join()
 	}
 	// resize the workers
@@ -124,9 +124,9 @@ func (pool *Pool) GetQueuedJobs() int64 {
 
 func (pool *Pool) newWorker() structWorker {
 	worker := structWorker{
-		pool: pool,
-		close:make(chan interface{}),
-		closed:make(chan interface{}),
+		pool:   pool,
+		close:  make(chan interface{}),
+		closed: make(chan interface{}),
 	}
 	go worker.run()
 	return worker
@@ -137,15 +137,15 @@ func (pool *Pool) Close() {
 }
 
 // Execute sync inside the pool
-func (pool *Pool) Execute(in interface{})  (interface{}, error) {
+func (pool *Pool) Execute(in interface{}) (interface{}, error) {
 	output := make(chan Result)
 	atomic.AddInt64(&pool.queuedJobs, 1)
-	pool.inputChannel<- request{param: in, outputChannel:output}
+	pool.inputChannel <- request{param: in, outputChannel: output}
 	result, ok := <-output
 	if !ok {
 		return nil, ErrPoolClosed
 	}
-	return result.output, result.err
+	return result.Output, result.Err
 }
 
 // Execute async
@@ -162,7 +162,7 @@ func (pool *Pool) ExecuteM(in []interface{}) chan Result {
 	var wg sync.WaitGroup
 	wg.Add(len(in))
 	for _, p := range in {
-		pool.inputChannel<- request{param: p, outputChannel: output, wg: &wg}
+		pool.inputChannel <- request{param: p, outputChannel: output, wg: &wg}
 	}
 	go func() {
 		wg.Wait()
