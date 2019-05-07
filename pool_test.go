@@ -20,7 +20,10 @@
 package gopool
 
 import (
+	"fmt"
+	"log"
 	"testing"
+	"time"
 )
 
 func TestPoolSize(t *testing.T) {
@@ -76,17 +79,16 @@ func TestPoolFunc(t *testing.T) {
 	}
 }
 
+type Operation struct {
+	a int
+	b int
+}
 
-//type Operation struct {
-//	a int
-//	b int
-//}
-//
-//func Execute(op Operation) int {
-//	time.Sleep(3000 * time.Millisecond)
-//	return op.a + op.b
-//}
-//
+func Execute(op Operation) int {
+	time.Sleep(3000 * time.Millisecond)
+	return op.a + op.b
+}
+
 //func Test_Single_Pool(t *testing.T) {
 //
 //	pool := NewPool(1, func(in interface{}) interface{} {
@@ -105,31 +107,39 @@ func TestPoolFunc(t *testing.T) {
 //}
 //
 //
-//func Test_Basic_Pool(t *testing.T) {
-//
-//	pool := NewPool(5, func(in interface{}) interface{} {
-//		return Execute(in.(Operation))
-//	})
-//
-//	ops := []interface{}{Operation{1,1},
-//		Operation{1,2},
-//		Operation{1,3},
-//		Operation{1,4},
-//		Operation{1,5},
-//		Operation{1,6},
-//		Operation{1,7},
-//		Operation{1,8}}
-//
-//	output := pool.ExecuteM(ops)
-//
-//	//wg.Wait()
-//	for r := range output {
-//		log.Println(fmt.Sprintf("Result => %v", r))
-//	}
-//
-//	if pool.GetQueuedJobs() != 0 {
-//		panic("Invalid jobs in the queue")
-//	}
-//	pool.Close()
-//
-//}
+func Test_Basic_Pool(t *testing.T) {
+
+	pool := NewPool(5, func(in interface{}) (interface{}, error) {
+		return Execute(in.(Operation)), nil
+	})
+
+	ops := []interface{}{Operation{1, 1},
+		Operation{1, 2},
+		Operation{1, 3},
+		Operation{1, 43},
+		Operation{1, 13},
+		Operation{1, 23},
+		Operation{1, 33},
+		Operation{1, 4},
+		Operation{1, 5},
+		Operation{1, 6},
+		Operation{1, 7},
+		Operation{1, 14},
+		Operation{1, 15},
+		Operation{1, 16},
+		Operation{1, 17},
+		Operation{1, 8}}
+
+	output := pool.ExecuteM(ops)
+
+	//wg.Wait()
+	for r := range output {
+		log.Println(fmt.Sprintf("Result => %v", r))
+	}
+
+	if pool.GetQueuedJobs() != 0 {
+		panic("Invalid jobs in the queue")
+	}
+	pool.Close()
+
+}

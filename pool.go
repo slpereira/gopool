@@ -21,6 +21,7 @@ package gopool
 
 import (
 	"errors"
+	"github.com/google/uuid"
 	"sync"
 	"sync/atomic"
 )
@@ -30,6 +31,7 @@ import (
 // The close channel receives a signal to close the worker
 // The closed channel signals that the worker was closed
 type structWorker struct {
+	id     string
 	pool   *Pool
 	close  chan interface{}
 	closed chan interface{}
@@ -49,7 +51,8 @@ type request struct {
 }
 
 var (
-	ErrPoolClosed = errors.New("the pool was closed")
+	ErrPoolClosed   = errors.New("the pool was closed")
+	ErrPoolZeroSize = errors.New("the pool has no workers")
 )
 
 func (worker *structWorker) run() {
@@ -124,6 +127,7 @@ func (pool *Pool) GetQueuedJobs() int64 {
 
 func (pool *Pool) newWorker() structWorker {
 	worker := structWorker{
+		id:     uuid.New().String(),
 		pool:   pool,
 		close:  make(chan interface{}),
 		closed: make(chan interface{}),
@@ -138,6 +142,9 @@ func (pool *Pool) Close() {
 
 // Execute sync inside the pool
 func (pool *Pool) Execute(in interface{}) (interface{}, error) {
+	if pool.GetSize() == 0 {
+		return nil, ErrPoolZeroSize
+	}
 	output := make(chan Result)
 	atomic.AddInt64(&pool.queuedJobs, 1)
 	pool.inputChannel <- request{param: in, outputChannel: output}
@@ -149,26 +156,29 @@ func (pool *Pool) Execute(in interface{}) (interface{}, error) {
 }
 
 // Execute async
-func (pool *Pool) ExecuteA(in interface{}) chan Result {
+func (pool *Pool) ExecuteA(in interface{}) (chan Result, error) {
 	atomic.AddInt64(&pool.queuedJobs, 1)
 	return pool.ExecuteM([]interface{}{in})
 }
 
 // Execute multiples requests async
-func (pool *Pool) ExecuteM(in []interface{}) chan Result {
+func (pool *Pool) ExecuteM(in []interface{}) (chan Result, error) {
+	if pool.GetSize() == 0 {
+		return nil, ErrPoolZeroSize
+	}
 	count := len(in)
 	output := make(chan Result, count)
 	atomic.AddInt64(&pool.queuedJobs, int64(count))
-	var wg sync.WaitGroup
-	wg.Add(len(in))
-	for _, p := range in {
-		pool.inputChannel <- request{param: p, outputChannel: output, wg: &wg}
-	}
 	go func() {
+		var wg sync.WaitGroup
+		wg.Add(len(in))
+		for _, p := range in {
+			pool.inputChannel <- request{param: p, outputChannel: output, wg: &wg}
+		}
 		wg.Wait()
 		close(output)
 	}()
-	return output
+	return output, nil
 }
 
 func NewPool(size int, f func(interface{}) (interface{}, error)) *Pool {
