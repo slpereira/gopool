@@ -3,108 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="05b2bf99-e445-420a-9013-89ceaae28d10" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pool.go" beforeDir="false" afterPath="$PROJECT_DIR$/pool.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pool_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/pool_test.go" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/go.mod">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pool.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="159" column="27" selection-start-line="159" selection-start-column="27" selection-end-line="159" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file:///usr/local/go/src/runtime/asm_amd64.s">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20055">
-              <caret line="1337" selection-start-line="1337" selection-end-line="1337" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pool_test.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="637">
-              <caret line="66" column="11" selection-start-line="66" selection-start-column="11" selection-end-line="66" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file:///usr/local/go/src/fmt/print.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3045">
-              <caret line="211" column="5" selection-start-line="211" selection-start-column="5" selection-end-line="211" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file:///usr/local/go/src/sync/atomic/doc.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1680">
-              <caret line="114" column="5" selection-start-line="114" selection-start-column="5" selection-end-line="114" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file:///usr/local/go/src/runtime/proc.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4440">
-              <caret line="301" selection-start-line="301" selection-end-line="301" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="15">
-                <caret line="1" column="123" selection-start-line="1" selection-start-column="123" selection-end-line="1" selection-end-column="123" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file:///usr/local/go/src/builtin/builtin.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2355">
-              <caret line="157" column="5" selection-start-line="157" selection-start-column="5" selection-end-line="157" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -122,40 +26,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/worker.go" />
-        <option value="$PROJECT_DIR$/pool_test.go" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/pool.go" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="829" />
-  </component>
+  <component name="ProjectId" id="1RbTLcte9DdhwVvqElQ7PZCDQZa" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="gopool" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gopool" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultGoTemplateProperty" value="Go File" />
@@ -171,21 +47,9 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="copyright.profiles" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Go Test.TestPoolFunc in github.com/slpereira/gopool">
+  <component name="RunManager" selected="Go Test.Test_Basic_Pool in github.com/slpereira/gopool">
     <configuration name="TestPoolFunc in github.com/slpereira/gopool" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="gopool" />
       <working_directory value="$PROJECT_DIR$" />
@@ -232,9 +96,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Test.Test_Basic_Pool in github.com/slpereira/gopool" />
         <item itemvalue="Go Test.TestPoolFunc in github.com/slpereira/gopool" />
         <item itemvalue="Go Test.TestPoolSize in github.com/slpereira/gopool" />
-        <item itemvalue="Go Test.Test_Basic_Pool in github.com/slpereira/gopool" />
         <item itemvalue="Go Test.Test_Single_Pool in github.com/slpereira/gopool" />
       </list>
     </recent_temporary>
@@ -271,33 +135,21 @@
       <configuration name="TestPoolFunc in github.com/slpereira/gopool" configurationId="GoTestRunConfiguration" />
     </history-entry>
   </component>
-  <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="829" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26108727" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.329235" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.33895922" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3989071" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" />
-      <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.329235" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" />
-    </layout>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Exporting Result fields" />
@@ -305,6 +157,40 @@
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1398" height="293" key="GridCell.Tab.0.bottom" timestamp="1583716340104">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="293" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1583716340104" />
+    <state width="1398" height="293" key="GridCell.Tab.0.center" timestamp="1583716340102">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="293" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1583716340102" />
+    <state width="1398" height="293" key="GridCell.Tab.0.left" timestamp="1583716340100">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="293" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1583716340100" />
+    <state width="1398" height="293" key="GridCell.Tab.0.right" timestamp="1583716340103">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="293" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1583716340103" />
+    <state width="1398" height="293" key="GridCell.Tab.1.bottom" timestamp="1583716298704">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="293" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1583716298704" />
+    <state width="1398" height="293" key="GridCell.Tab.1.center" timestamp="1583716298701">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="293" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1583716298701" />
+    <state width="1398" height="293" key="GridCell.Tab.1.left" timestamp="1583716298699">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="293" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1583716298699" />
+    <state width="1398" height="293" key="GridCell.Tab.1.right" timestamp="1583716298703">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="293" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1583716298703" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -356,92 +242,5 @@
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/go.mod">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file:///usr/local/go/src/runtime/asm_amd64.s">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20055">
-          <caret line="1337" selection-start-line="1337" selection-end-line="1337" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/go/src/fmt/print.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3045">
-          <caret line="211" column="5" selection-start-line="211" selection-start-column="5" selection-end-line="211" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/go/src/sync/atomic/doc.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1680">
-          <caret line="114" column="5" selection-start-line="114" selection-start-column="5" selection-end-line="114" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/go/src/runtime/proc.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4440">
-          <caret line="301" selection-start-line="301" selection-end-line="301" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="15">
-            <caret line="1" column="123" selection-start-line="1" selection-start-column="123" selection-end-line="1" selection-end-column="123" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/go/src/builtin/builtin.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2355">
-          <caret line="157" column="5" selection-start-line="157" selection-start-column="5" selection-end-line="157" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pool_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="637">
-          <caret line="66" column="11" selection-start-line="66" selection-start-column="11" selection-end-line="66" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pool.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="159" column="27" selection-start-line="159" selection-start-column="27" selection-end-line="159" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="Copyright.UI">
-        <settings>
-          <last-edited>Open Source Project</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
   </component>
 </project>

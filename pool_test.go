@@ -130,7 +130,11 @@ func Test_Basic_Pool(t *testing.T) {
 		Operation{1, 17},
 		Operation{1, 8}}
 
-	output := pool.ExecuteM(ops)
+	output, err := pool.ExecuteM(ops)
+
+	if err != nil {
+		t.Fatal(err)
+	}
 
 	//wg.Wait()
 	for r := range output {
